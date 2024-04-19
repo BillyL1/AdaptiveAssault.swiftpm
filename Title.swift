@@ -13,7 +13,10 @@ struct Title: View {
         VStack {
             Text("Adaptive")
             Text("Assult")
-         //   Button("play")
+                NavigationStack{
+                    NavigationLink("Play", destination: Level1View())
+                
+            }
         }
     }
 }

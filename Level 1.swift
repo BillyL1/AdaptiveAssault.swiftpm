@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Level1View: View {
     var body: some View {
-        
+        Text("Placeholder")
         
     }
 }
