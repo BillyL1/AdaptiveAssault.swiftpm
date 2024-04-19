@@ -8,10 +8,12 @@
 import Foundation
 import SwiftUI
 
-
 struct EnemyView: View {
+    @State var xpos = 0.0
+    @State var ypos = 0.0
     var body: some View {
         Rectangle()
+            .position(x: xpos, y: ypos)
         
     }
 }
