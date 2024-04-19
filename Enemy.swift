@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
+
+
+struct EnemyView: View {
+    var body: some View {
+        Rectangle()
+        
+    }
+}
