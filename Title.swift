@@ -1,3 +1,11 @@
+//
+//  Title.swift
+//  AdaptiveAssault
+//
+//  Created by Austin Witt on 4/19/24.
+//
+
+import Foundation
 import SwiftUI
 
 struct Title: View {
