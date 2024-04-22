@@ -8,14 +8,13 @@
 import Foundation
 import SwiftUI
 
-let logo = Image("TemporaryLogo")
-
 struct Title: View {
     var body: some View {
+        
         VStack {
-            Image(systemName: "logo")
-                .resizable()
-                
+            Text("Adaptive")
+            Text("Assult")
+            Image(systemName: "shield")
                 NavigationStack{
                     NavigationLink("Play", destination: Level1View())
                 
@@ -23,4 +22,3 @@ struct Title: View {
         }
     }
 }
-    
