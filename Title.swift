@@ -16,7 +16,7 @@ struct Title: View {
             Text("Assult")
             Image(systemName: "shield")
                 NavigationStack{
-                    NavigationLink("Play", destination: Level1View())
+                    NavigationLink("Play", destination: LevelSelectorView())
                 
             }
         }
