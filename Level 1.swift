@@ -16,15 +16,29 @@ struct LevelSelectorView: View {
                 ForEach(1...9, id: \.self) { number in
                     HStack {
                         ForEach(1...3, id: \.self) { _ in
-                            RoundedRectangle(cornerRadius: 20)
-                                .frame(width: 60, height: 60)
-                                .overlay(
-                                    Text("\(number)")
+                            if number > 1 {
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 20)
+                                    .frame(width: 60, height: 60)
+                                    .overlay(
+                                    Image(systemName: "lock")
+                                        .resizable()
+                                        .frame(width: 45, height: 45)
                                         .foregroundColor(.white)
-                                )
-                                .padding()
+                                    )
+                                   
+                                }
+                            } else {
+                                RoundedRectangle(cornerRadius: 20)
+                                    .frame(width: 60, height: 60)
+                                    .overlay(
+                                        Text("\(number)")
+                                            .foregroundColor(.white)
+                                    )
+                            }
                         }
                     }
+                    .padding()
                 }
             }
         }
