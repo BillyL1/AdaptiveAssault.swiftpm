@@ -13,9 +13,9 @@ struct LevelSelectorView: View {
         Text("Level Selector")
         ScrollView{
             VStack {
-                ForEach(1...9, id: \.self) { number in
+                ForEach(1...6, id: \.self) { number in
                     HStack {
-                        ForEach(1...3, id: \.self) { _ in
+                        ForEach(1...3, id: \.self) { count in
                             if number > 1 {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 20)
@@ -28,11 +28,12 @@ struct LevelSelectorView: View {
                                     )
                                    
                                 }
-                            } else {
+                            } 
+                            else {
                                 RoundedRectangle(cornerRadius: 20)
                                     .frame(width: 60, height: 60)
                                     .overlay(
-                                        Text("\(number)")
+                                        Text("\(count)")
                                             .foregroundColor(.white)
                                     )
                             }
@@ -44,3 +45,8 @@ struct LevelSelectorView: View {
         }
     }
 }
+
+
+
+
+// add a code that says (" if player progress is less than the lvl, it shows that it is locked")
