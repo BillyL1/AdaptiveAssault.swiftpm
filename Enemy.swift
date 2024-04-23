@@ -8,14 +8,28 @@
 import Foundation
 import SwiftUI
 
-struct EnemyView: View {
-    @State var xpos = 0.0
-    @State var ypos = 0.0
-    @State var health = 10
-    var body: some View {
-        Rectangle()
-            .position(x: xpos, y: ypos)
-            
-        
+class Enemy {
+    var xpos: CGFloat
+    var ypos: CGFloat
+    var health: Int
+    var type: any Shape
+    
+    init(xpos: CGFloat, ypos: CGFloat, health: Int, type: any Shape) {
+        self.xpos = xpos
+        self.ypos = ypos
+        self.health = health
+        self.type = type
+        }
+    }
+
+class enemy1: Enemy {
+    override init(xpos: CGFloat, ypos: CGFloat, health: Int, type: any Shape) {
+        super.init(xpos: xpos, ypos: ypos, health: health, type: Rectangle())
+    }
+}
+
+class enemy2: Enemy {
+    override init(xpos: CGFloat, ypos: CGFloat, health: Int, type: any Shape) {
+        super.init(xpos: xpos, ypos: ypos, health: health, type: Circle())
     }
 }
