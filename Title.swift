@@ -13,12 +13,15 @@ struct Title: View {
         
         VStack {
             Text("Adaptive")
-            Text("Assult")
+            Text("Assault")
             Image(systemName: "shield")
                 NavigationStack{
                     NavigationLink("Play", destination: LevelSelectorView())
-                
+                    NavigationLink("HighScores", destination: HighScoreView())
+                    NavigationLink("Towers", destination: TowersView())
+            
             }
+            
         }
     }
 }
