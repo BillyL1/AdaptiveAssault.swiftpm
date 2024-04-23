@@ -12,6 +12,7 @@ struct LevelSelectorView: View {
     var body: some View {
         Text("Level Selector")
         ScrollView{
+            NavigationStack{
             VStack {
                 ForEach(1...6, id: \.self) { number in
                     HStack {
@@ -19,25 +20,30 @@ struct LevelSelectorView: View {
                             if number > 1 {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 20)
-                                    .frame(width: 60, height: 60)
-                                    .overlay(
-                                    Image(systemName: "lock")
-                                        .resizable()
-                                        .frame(width: 45, height: 45)
-                                        .foregroundColor(.white)
-                                    )
-                                   
+                                        .frame(width: 60, height: 60)
+                                        .overlay(
+                                            Image(systemName: "lock")
+                                                .resizable()
+                                                .frame(width: 45, height: 45)
+                                                .foregroundColor(.white)
+                                        )
+                                    
                                 }
+                                
                             } 
-                            else {
-                                RoundedRectangle(cornerRadius: 20)
-                                    .frame(width: 60, height: 60)
-                                    .overlay(
-                                        Text("\(count)")
-                                            .foregroundColor(.white)
-                                    )
+                            else 
+                            {
+                                NavigationLink(destination: Level1View()) {
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .frame(width: 60, height: 60)
+                                        .overlay(
+                                            Text("\(count)")
+                                                .foregroundColor(.white)
+                                        )
+                                }
                             }
                         }
+                    }
                     }
                     .padding()
                 }
