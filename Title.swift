@@ -13,7 +13,9 @@ struct Title: View {
         
         VStack {
             Text("Adaptive")
+                .bold()
             Text("Assault")
+                .bold()
             Image(systemName: "shield")
                 NavigationStack{
                     NavigationLink("Play", destination: LevelSelectorView())
