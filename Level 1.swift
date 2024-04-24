@@ -1,4 +1,4 @@
-import SwiftUI
+    import SwiftUI
 
 
 
@@ -28,6 +28,10 @@ struct Level1View: View {
                 .fill(Color.white)
                 .frame(width: 300, height: 100)
                 .position(x: 500, y: 200)
+            Rectangle()
+                .fill(Color.white)
+                .frame(width: 100, height: 900)
+                .position(x: 600, y: 700)
         }
     }
 }
