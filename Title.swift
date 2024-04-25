@@ -15,18 +15,49 @@ struct Title: View {
                 NavigationStack{
                     VStack{
                         Text("Adaptive")
+                            .font(.system(size:100))
                             .bold()
                         Text("Assault")
+                            .font(.system(size:100))
                             .bold()
                         Image(systemName: "shield")
+                            .font(.system(size:100))
+
                     }
+                    Spacer()
                     
-                    NavigationLink("Play", destination: LevelSelectorView())
-                    NavigationLink("HighScores", destination: HighScoreView())
-                    NavigationLink("Towers", destination: TowersView())
-            
+                    NavigationLink {
+                                        LevelSelectorView()
+                                    } label: {
+                                        Text("Play")
+                                            .font(.system(size:100))
+                                            .foregroundStyle(.black)
+
+                                        
+                                    }
+                    Spacer()
+                    
+                    HStack{
+                        NavigationLink {
+                            HighScoreView()
+                        } label: {
+                            Text("Stats                               ")
+                                .font(.system(size:75))
+                                .foregroundStyle(.black)
+
+                        }
+                        NavigationLink {
+                            TowersView()
+                        } label: {
+                            Text("Index" + "                          ")
+                                .font(.system(size:75))
+                            
+                                .foregroundStyle(.black)
+                        }
+                    }
+                    Spacer()
+                    Spacer()
             }
-            
         }
     }
 }
