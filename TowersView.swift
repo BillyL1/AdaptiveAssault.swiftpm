@@ -12,18 +12,21 @@ struct TowersView:View {
     var body: some View {
         HStack{
             VStack{
-                Text("Tower 1")
-                Text("Description")
+                Text("Musketeer")
+                Text("POW!.....POW!")
+                Text("Fueled with the hatred of learning, this musketeer will do everything she can to halt these shapes in their path")
 
             }
             VStack{
-                Text("Tower 2")
-                Text("Description")
+                Text("Wizard")
+                Text("Magic is knowlage")
+                Text("Education is what ruined the wizard's reputation, so why not go after where education begins, the shapes")
 
             }
             VStack{
-                Text("Tower 3")
-                Text("Description")
+                Text("Tesla")
+                Text("ZAP")
+                Text("Made by the wizard to do his biddings, this tower fights with precision and speed")
 
             }
 
