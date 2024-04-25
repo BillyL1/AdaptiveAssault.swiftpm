@@ -46,7 +46,7 @@ struct Level1View: View {
                         .frame(width: 65, height: 65)
                         .foregroundColor(.white))
                 .frame(width: 150, height: 150)
-                .position(x: 880, y: 300)
+                .position(x: 740, y: 300)
                 
             RoundedRectangle(cornerSize: CGSize(width: 20, height:20))
                 .fill(Color.gray)
@@ -56,7 +56,7 @@ struct Level1View: View {
                         .frame(width: 65, height: 65)
                         .foregroundColor(.white))
                 .frame(width: 150, height: 150)
-                .position(x: 880, y: 500)
+                .position(x: 740, y: 500)
             RoundedRectangle(cornerSize: CGSize(width: 20, height:20))
                 .fill(Color.gray)
                 .overlay(
@@ -65,7 +65,7 @@ struct Level1View: View {
                         .frame(width: 65, height: 65)
                         .foregroundColor(.white))
                 .frame(width: 150, height: 150)
-                .position(x: 880, y: 700)
+                .position(x: 740, y: 700)
             
             //Tower Placement
             Circle()

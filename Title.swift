@@ -12,12 +12,15 @@ struct Title: View {
     var body: some View {
         
         VStack {
-            Text("Adaptive")
-                .bold()
-            Text("Assault")
-                .bold()
-            Image(systemName: "shield")
                 NavigationStack{
+                    VStack{
+                        Text("Adaptive")
+                            .bold()
+                        Text("Assault")
+                            .bold()
+                        Image(systemName: "shield")
+                    }
+                    
                     NavigationLink("Play", destination: LevelSelectorView())
                     NavigationLink("HighScores", destination: HighScoreView())
                     NavigationLink("Towers", destination: TowersView())
