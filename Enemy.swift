@@ -33,3 +33,10 @@ class enemy2: Enemy {
         super.init(xpos: xpos, ypos: ypos, health: health, type: Circle())
     }
 }
+
+class enemy3: Enemy {
+    override init(xpos: CGFloat, ypos: CGFloat, health: Int, type: any Shape) {
+        super.init(xpos: xpos, ypos: ypos, health: health, type: Capsule(style: .circular))
+            
+    }
+}
