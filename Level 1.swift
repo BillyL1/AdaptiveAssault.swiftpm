@@ -3,8 +3,8 @@
 
 
 struct Level1View: View {
-    @State private var opacity: Double = 1.0
-    @State private var isIncreasing = true
+    @State var opacity: Double = 1.0
+    @State var isIncreasing = true
     
     let timer = Timer.publish(every: 0.02, on: .main, in: .common).autoconnect()
     var body: some View {
