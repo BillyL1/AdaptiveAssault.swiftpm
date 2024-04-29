@@ -5,7 +5,8 @@
 struct Level1View: View {
     @State var opacity: Double = 1.0
     @State var isIncreasing = true
-    
+    @State var xpos:CGFloat = -390
+    @State var ypos:CGFloat = -600
     let timer = Timer.publish(every: 0.02, on: .main, in: .common).autoconnect()
     var body: some View {
         ZStack{
@@ -87,6 +88,13 @@ struct Level1View: View {
                 }
                 .frame(width: 80)
                 .position(x:250, y:200)
+            //Enemy
+          Rectangle()
+                .position(x:xpos, y:ypos)
+                .frame(width: 50, height: 50)
+            
+            
+            
             
         }
     }
