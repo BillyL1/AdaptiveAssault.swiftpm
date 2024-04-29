@@ -10,10 +10,35 @@ import SwiftUI
 
 struct HighScoreView: View {
     var body: some View {
-        Text("HighScore")
-            .font(.largeTitle)
-        Text("Highscore 1")
-        Text("Highscore 2")
-        Text("Highscore 3")
+  
+            VStack {
+                Text("Story")
+                    .font(.title)
+                    .padding()
+                List {
+                    HStack {
+                        Text("Rank")
+                        Spacer()
+                        Text("Name")
+                        Spacer()
+                        Text("Score")
+                    }
+                }
+                
+                Text("Infinite")
+                    .font(.title)
+                    .padding()
+                List {
+                    HStack {
+                        Text("Rank")
+                        Spacer()
+                        Text("Name")
+                        Spacer()
+                        Text("Score")
+                    }
+                }
+                .padding()
+            }
+        }
     }
-}
+
