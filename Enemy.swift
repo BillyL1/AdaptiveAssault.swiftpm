@@ -12,6 +12,7 @@ class Enemy {
     var xpos: CGFloat
     var ypos: CGFloat
     var health: Int
+    //base enemy health: 100
     var type: any Shape
     
     init(xpos: CGFloat, ypos: CGFloat, health: Int, type: any Shape) {

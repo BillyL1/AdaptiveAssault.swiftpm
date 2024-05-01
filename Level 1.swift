@@ -98,7 +98,159 @@ struct Level1View: View {
                     }
                 }
                 .frame(width: 80)
-                .position(x:250, y:200)
+                .position(x:500, y:50)
+            Circle()
+            
+                .stroke(Color.yellow, lineWidth: 10)
+                .opacity(opacity)
+                .onReceive(timer) { _ in
+                    if self.isIncreasing {
+                        self.opacity += 0.02
+                    } else {
+                        self.opacity -= 0.02
+                    }
+                    
+                    if self.opacity >= 1.0 {
+                        self.isIncreasing = false
+                    } else if self.opacity <= 0.2 {
+                        self.isIncreasing = true
+                    }
+                }
+                .frame(width: 80)
+                .position(x:500, y:550)
+            Circle()
+            
+                .stroke(Color.yellow, lineWidth: 10)
+                .opacity(opacity)
+                .onReceive(timer) { _ in
+                    if self.isIncreasing {
+                        self.opacity += 0.02
+                    } else {
+                        self.opacity -= 0.02
+                    }
+                    
+                    if self.opacity >= 1.0 {
+                        self.isIncreasing = false
+                    } else if self.opacity <= 0.2 {
+                        self.isIncreasing = true
+                    }
+                }
+                .frame(width: 80)
+                .position(x:500, y:350)
+            Circle()
+            
+                .stroke(Color.yellow, lineWidth: 10)
+                .opacity(opacity)
+                .onReceive(timer) { _ in
+                    if self.isIncreasing {
+                        self.opacity += 0.02
+                    } else {
+                        self.opacity -= 0.02
+                    }
+                    
+                    if self.opacity >= 1.0 {
+                        self.isIncreasing = false
+                    } else if self.opacity <= 0.2 {
+                        self.isIncreasing = true
+                    }
+                }
+                .frame(width: 80)
+                .position(x:400, y:850)
+            Circle()
+            
+                .stroke(Color.yellow, lineWidth: 10)
+                .opacity(opacity)
+                .onReceive(timer) { _ in
+                    if self.isIncreasing {
+                        self.opacity += 0.02
+                    } else {
+                        self.opacity -= 0.02
+                    }
+                    
+                    if self.opacity >= 1.0 {
+                        self.isIncreasing = false
+                    } else if self.opacity <= 0.2 {
+                        self.isIncreasing = true
+                    }
+                }
+                .frame(width: 80)
+                .position(x:250, y:150)
+            Circle()
+            
+                .stroke(Color.yellow, lineWidth: 10)
+                .opacity(opacity)
+                .onReceive(timer) { _ in
+                    if self.isIncreasing {
+                        self.opacity += 0.02
+                    } else {
+                        self.opacity -= 0.02
+                    }
+                    
+                    if self.opacity >= 1.0 {
+                        self.isIncreasing = false
+                    } else if self.opacity <= 0.2 {
+                        self.isIncreasing = true
+                    }
+                }
+                .frame(width: 80)
+                .position(x:250, y:550)
+            Circle()
+            
+                .stroke(Color.yellow, lineWidth: 10)
+                .opacity(opacity)
+                .onReceive(timer) { _ in
+                    if self.isIncreasing {
+                        self.opacity += 0.02
+                    } else {
+                        self.opacity -= 0.02
+                    }
+                    
+                    if self.opacity >= 1.0 {
+                        self.isIncreasing = false
+                    } else if self.opacity <= 0.2 {
+                        self.isIncreasing = true
+                    }
+                }
+                .frame(width: 80)
+                .position(x:250, y:850)
+            Circle()
+            
+                .stroke(Color.yellow, lineWidth: 10)
+                .opacity(opacity)
+                .onReceive(timer) { _ in
+                    if self.isIncreasing {
+                        self.opacity += 0.02
+                    } else {
+                        self.opacity -= 0.02
+                    }
+                    
+                    if self.opacity >= 1.0 {
+                        self.isIncreasing = false
+                    } else if self.opacity <= 0.2 {
+                        self.isIncreasing = true
+                    }
+                }
+                .frame(width: 80)
+                .position(x:100, y:850)
+            Circle()
+            
+                .stroke(Color.yellow, lineWidth: 10)
+                .opacity(opacity)
+                .onReceive(timer) { _ in
+                    if self.isIncreasing {
+                        self.opacity += 0.02
+                    } else {
+                        self.opacity -= 0.02
+                    }
+                    
+                    if self.opacity >= 1.0 {
+                        self.isIncreasing = false
+                    } else if self.opacity <= 0.2 {
+                        self.isIncreasing = true
+                    }
+                }
+                .frame(width: 80)
+                .position(x:250, y:350)
             //Enemy
             Rectangle()
                 .position(x:xpos, y:ypos)
