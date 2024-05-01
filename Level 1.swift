@@ -1,5 +1,15 @@
     import SwiftUI
 
+class TimerData: ObservableObject {
+    @Published var counter = 0
+    
+    init() {
+        // Start a timer to increase the counter every second
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            self.counter += 1
+        }
+    }
+}
 
 
 struct Level1View: View {
@@ -7,7 +17,8 @@ struct Level1View: View {
     @State var isIncreasing = true
     @State var xpos:CGFloat = -390
     @State var ypos:CGFloat = -600
-    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    var timer = Timer.publish(every: 0.02, on: .main, in: .common).autoconnect()
+    @ObservedObject var timerData = TimerData()
     var body: some View {
         ZStack{
             
@@ -244,7 +255,9 @@ struct Level1View: View {
           Rectangle()
                 .position(x:xpos, y:ypos)
                 .frame(width: 50, height: 50)
-            
+            if timerData.counter.isMultiple(of: 1) {
+                
+            }
             
             
             
