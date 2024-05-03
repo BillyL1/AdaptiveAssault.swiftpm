@@ -7,6 +7,7 @@ class TimerData: ObservableObject {
         // Start a timer to increase the counter every second
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             self.counter += 1
+       
         }
     }
 }
@@ -17,6 +18,7 @@ struct Level1View: View {
     @State var isIncreasing = true
     @State var xpos:CGFloat = -390
     @State var ypos:CGFloat = -600
+
     var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @ObservedObject var timerData = TimerData()
     var body: some View {
@@ -256,37 +258,11 @@ struct Level1View: View {
                 .position(x: xpos, y: ypos)
                 .frame(width: 50, height: 50)
                 .onAppear {
-                    xpos = -305
-                    ypos = -410
-                    withAnimation(Animation.linear(duration: 16)) {
-                        ypos = 310
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 16.4) {
-                        withAnimation(Animation.linear(duration: 6 + 2/3)) {
-                            xpos = -5
-                        }
-                    }
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 22.3) {
-                        withAnimation(Animation.linear(duration: 11+1/9)) {
-                            ypos = -190
-                        }
-                    }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 33.7) {
-                        withAnimation(Animation.linear(duration: 4+4/9)) {
-                            xpos = 195
-                        }
-                    }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 38.3) {
-                        withAnimation(Animation.linear(duration: 13+7/9)) {
-                            ypos = 430
-                        }
-                    }
-                    
+                  Move()          
                 }
-            Path { path in
-                path.move(to: CGPoint(x: 100, y: 0))
+                
+                Path { path in
+                    path.move(to: CGPoint(x: 100, y: 0))
                 path.addLine(to: CGPoint(x: 100, y:700))
                 path.addLine(to: CGPoint(x: 400, y: 700))
                 path.addLine(to: CGPoint(x: 400, y: 200))
@@ -297,7 +273,36 @@ struct Level1View: View {
             .stroke(.blue, lineWidth: 1)
         }
     }
-    
+    func Move(){
+        xpos = -305
+        ypos = -410
+        withAnimation(Animation.linear(duration: 16)) {
+            ypos = 310
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 16.4) {
+            withAnimation(Animation.linear(duration: 6 + 2/3)) {
+                xpos = -5
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 22.3) {
+            withAnimation(Animation.linear(duration: 11+1/9)) {
+                ypos = -190
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 33.7) {
+            withAnimation(Animation.linear(duration: 4+4/9)) {
+                xpos = 195
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 38.3) {
+            withAnimation(Animation.linear(duration: 13+7/9)) {
+                ypos = 430
+            }
+        }
+        
+    }
     
     
     
@@ -307,3 +312,4 @@ struct Level1View: View {
         }
     }
 }
+
