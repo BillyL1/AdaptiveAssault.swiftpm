@@ -1,4 +1,4 @@
-    import SwiftUI
+import SwiftUI
 
 class TimerData: ObservableObject {
     @Published var counter = 0
@@ -59,7 +59,7 @@ struct Level1View: View {
                         .foregroundColor(.white))
                 .frame(width: 150, height: 150)
                 .position(x: 740, y: 300)
-                
+            
             RoundedRectangle(cornerSize: CGSize(width: 20, height:20))
                 .fill(Color.gray)
                 .overlay(
@@ -81,7 +81,7 @@ struct Level1View: View {
             
             //Tower Placement
             Circle()
-    
+            
                 .stroke(Color.yellow, lineWidth: 10)
                 .opacity(opacity)
                 .onReceive(timer) { _ in
@@ -252,15 +252,49 @@ struct Level1View: View {
                 .frame(width: 80)
                 .position(x:250, y:350)
             //Enemy
-          Rectangle()
-                .position(x:xpos, y:ypos)
+            Rectangle()
+                .position(x: xpos, y: ypos)
                 .frame(width: 50, height: 50)
-            if timerData.counter.isMultiple(of: 1) {
+                .onAppear {
+                    xpos = -305
+                    ypos = -410
+                    withAnimation(Animation.linear(duration: 16)) {
+                        ypos = 310
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 16.4) {
+                        withAnimation(Animation.linear(duration: 6 + 2/3)) {
+                            xpos = -5
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 22.3) {
+                        withAnimation(Animation.linear(duration: 11+1/9)) {
+                            ypos = -190
+                        }
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 33.7) {
+                        withAnimation(Animation.linear(duration: 4+4/9)) {
+                            xpos = 195
+                        }
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 38.3) {
+                        withAnimation(Animation.linear(duration: 13+7/9)) {
+                            ypos = 430
+                        }
+                    }
+                    
+                }
+            Path { path in
+                path.move(to: CGPoint(x: 100, y: 0))
+                path.addLine(to: CGPoint(x: 100, y:700))
+                path.addLine(to: CGPoint(x: 400, y: 700))
+                path.addLine(to: CGPoint(x: 400, y: 200))
+                path.addLine(to: CGPoint(x: 600, y: 200))
+                path.addLine(to: CGPoint(x: 600, y: 1000))
                 
             }
-            
-            
-            
+            .stroke(.blue, lineWidth: 1)
         }
     }
     
