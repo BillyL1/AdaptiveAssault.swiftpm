@@ -253,32 +253,34 @@ struct Level1View: View {
                 .position(x:250, y:350)
             //Enemy
             Rectangle()
-                .position(x:xpos, y:ypos)
+                .position(x: xpos, y: ypos)
                 .frame(width: 50, height: 50)
                 .onAppear {
-                    xpos = -270
+                    xpos = -305
                     ypos = -410
-                    withAnimation(Animation.linear(duration: 14.88)) {
-                        self.ypos = 260
+                    withAnimation(Animation.linear(duration: 16)) {
+                        ypos = 310
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 14.88) {
-                        withAnimation(Animation.linear(duration: 6.33)) {
-                            xpos = 25
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 16.4) {
+                        withAnimation(Animation.linear(duration: 6 + 2/3)) {
+                            xpos = -5
                         }
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 21.21) {
-                        withAnimation(Animation.linear(duration: 6.33)) {
-                            ypos = -230
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 22.3) {
+                        withAnimation(Animation.linear(duration: 11+1/9)) {
+                            ypos = -190
                         }
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 27.54) {
-                        withAnimation(Animation.linear(duration: 4.55)) {
-                            xpos = 230
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 33.7) {
+                        withAnimation(Animation.linear(duration: 4+4/9)) {
+                            xpos = 195
                         }
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 32.09) {
-                        withAnimation(Animation.linear(duration: 10.22)) {
-                            ypos = 460
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 38.3) {
+                        withAnimation(Animation.linear(duration: 13+7/9)) {
+                            ypos = 430
                         }
                     }
                     
