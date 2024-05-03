@@ -26,33 +26,60 @@ struct Title: View {
                     }
                     Spacer()
                     
-                    NavigationLink {
-                                        LevelSelectorView()
-                                    } label: {
-                                        Text("Play")
-                                            .font(.system(size:100))
-                                            .foregroundStyle(.black)
-
+                        NavigationLink {
+                            LevelSelectorView()
+                        } label: {
+                            ZStack{
+                                RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
+                                    .stroke(Color.gray, lineWidth: 7)
+                                    .background(
+                                        RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
+                                            .fill(Color.brown))
+                                    .frame(width: 200, height: 120, alignment: .center)
+                            Text("Play")
+                                .font(.system(size:100))
+                                .foregroundStyle(Color.black)
                                         
-                                    }
+                            
+                            
+                        }
+                  
+                    }
                     Spacer()
                     
                     HStack{
+                        
                         NavigationLink {
                             HighScoreView()
                         } label: {
-                            Text("Stats                               ")
+                            ZStack{
+                                RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                                    .stroke(Color.gray, lineWidth: 7)
+                                    .background(
+                                        RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                                            .fill(Color.brown))
+                                    .frame(width: 200, height: 120, alignment: .center)
+                            Text("Stats")
                                 .font(.system(size:75))
                                 .foregroundStyle(.black)
-
                         }
+                        }
+                       
+                            
                         NavigationLink {
                             TowersView()
                         } label: {
-                            Text("Index" + "                          ")
+                            ZStack{
+                            RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                                .stroke(Color.gray, lineWidth: 7)
+                                .background(
+                                    RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
+                                        .fill(Color.brown))
+                                .frame(width: 200, height: 120, alignment: .center)
+                            Text("Index")
                                 .font(.system(size:75))
-                            
                                 .foregroundStyle(.black)
+                        }
                         }
                     }
                     Spacer()
