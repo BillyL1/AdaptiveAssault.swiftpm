@@ -17,8 +17,10 @@ struct TowersView:View {
                     .background(
                         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                             .fill(Color.brown))
-                    .frame(width: 310, height: 190, alignment: .center)
+                    .frame(width: 310, height: 210, alignment: .center)
                 VStack{
+                    Image(systemName: "figure.hunting")
+                        .font(.system(size:40))
                     Text("Musketeer")
                         .font(.system(size:40))
                         .bold()
@@ -36,8 +38,10 @@ struct TowersView:View {
                     .background(
                         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                             .fill(Color.brown))
-                    .frame(width: 310, height: 190, alignment: .center)
+                    .frame(width: 310, height: 210, alignment: .center)
                 VStack{
+                    Image(systemName: "wand.and.stars")
+                    .font(.system(size:40))
                     Text("Wizard")
                         .font(.system(size:40))
                         .bold()
@@ -56,8 +60,13 @@ struct TowersView:View {
                     .background(
                         RoundedRectangle(cornerSize: CGSize(width: 30, height: 30))
                             .fill(Color.brown))
-                    .frame(width: 310, height: 190, alignment: .center)
+                    .frame(width: 310, height: 210, alignment: .center)
                 VStack{
+                    ZStack{
+                        Image(systemName: "pencil.tip")
+                            .font(.system(size:40))
+
+                    }
                     Text("Tesla")
                         .font(.system(size:40))
                         .bold()

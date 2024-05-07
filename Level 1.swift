@@ -55,7 +55,7 @@ struct Level1View: View {
             RoundedRectangle(cornerSize: CGSize(width: 20, height:20))
                 .fill(Color.gray)
                 .overlay(
-                    Image(systemName: "building.columns")
+                    Image(systemName: "figure.hunting")
                         .resizable()
                         .frame(width: 65, height: 65)
                         .foregroundColor(.white))
@@ -65,7 +65,7 @@ struct Level1View: View {
             RoundedRectangle(cornerSize: CGSize(width: 20, height:20))
                 .fill(Color.gray)
                 .overlay(
-                    Image(systemName: "building")
+                    Image(systemName: "wand.and.stars")
                         .resizable()
                         .frame(width: 65, height: 65)
                         .foregroundColor(.white))
@@ -74,7 +74,7 @@ struct Level1View: View {
             RoundedRectangle(cornerSize: CGSize(width: 20, height:20))
                 .fill(Color.gray)
                 .overlay(
-                    Image(systemName: "building.2")
+                    Image(systemName: "pencil.tip")
                         .resizable()
                         .frame(width: 65, height: 65)
                         .foregroundColor(.white))
