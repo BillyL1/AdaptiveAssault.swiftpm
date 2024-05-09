@@ -20,33 +20,13 @@ struct HighScoreView: View {
             Text("Story")
                 .font(.title)
                 .padding()
-            List {
-                ForEach(0..<ranksStory.count) { index in
-                    HStack {
-                        Text(ranksStory[index])
-                        Spacer()
-                        Text(namesStory[index])
-                        Spacer()
-                        Text(scoresStory[index])
-                    }
-                }
+            
             }
             
             Text("Infinite")
                 .font(.title)
                 .padding()
-            List {
-                ForEach(0..<ranksInf.count) { index in
-                    HStack {
-                        Text(ranksInf[index])
-                        Spacer()
-                        Text(namesInf[index])
-                        Spacer()
-                        Text(scoresInf[index])
-                    }
+            
                 }
             }
-            .padding()
-        }
-    }
-}
+            
