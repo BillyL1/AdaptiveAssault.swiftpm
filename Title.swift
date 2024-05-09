@@ -86,10 +86,10 @@ struct Title: View {
                                 .font(.system(size:75))
                                 .foregroundStyle(.black)
                         }
-                        Spacer()
+                        }
                     }
                 }
             }
         }
     }
-}
+

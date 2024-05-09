@@ -38,6 +38,5 @@ class enemy2: Enemy {
 class enemy3: Enemy {
     override init(xpos: CGFloat, ypos: CGFloat, health: Int, type: any Shape) {
         super.init(xpos: xpos, ypos: ypos, health: health, type: Capsule(style: .circular))
-            
     }
 }
