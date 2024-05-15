@@ -261,6 +261,12 @@ struct Level1View: View {
                 .onAppear {
                     Move()          
                 }
+            Circle()
+                .position(x: xpos, y: ypos)
+                .frame(width: 50, height: 50)
+                .onAppear {
+                    Move()
+                }
             //            let spaceship = SKSpriteNode(imageNamed: "rocket.png")
             //            spaceship.position = CGPoint(x: 100, y: 100)
             //            self.addChild(spaceship)
